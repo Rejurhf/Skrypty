@@ -1,4 +1,4 @@
-;Rejurhf
+﻿;Rejurhf
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 ; #Warn  ; Enable warnings to assist with detecting common errors.
@@ -10,12 +10,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ; skróty pisowni
 :*:mz@::mziomek108@gmail.com
+:*:re@::rejurhf108@gmail.com
 ::ty::Ty
 ::ci::Ci
 
-; PrintScreen remap
-Media_Prev::PrintScreen
-   Return
 
 ; NumpadDot to Dot
 NumpadDot::.
@@ -27,6 +25,22 @@ Media_Play_Pause::
    IfWinExist VLC media player
       WinGetTitle, VLC
    ControlSend,, {Space}, %VLC%             ;zadziałaj znakiem spacji klawiatura
+Return
+
+; VLC Next song
+Media_Next::
+  SetTitleMatchMode, 2
+  IfWinExist VLC media player
+    WinGetTitle, VLC
+  ControlSend,, {n}, %VLC%             ;zadziałaj znakiem spacji klawiatura
+Return
+
+; VLC Previous song
+Media_Prev::
+  SetTitleMatchMode, 2
+  IfWinExist VLC media player
+    WinGetTitle, VLC
+  ControlSend,, {p}, %VLC%             ;zadziałaj znakiem spacji klawiatura
 Return
 
 ; VLC Play/Pouse
