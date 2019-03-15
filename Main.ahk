@@ -15,12 +15,12 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ::ci::Ci
 
 ; Move between desktops using simpler shortcut
-; RAlt + , instead
+; LAlt + w instead of LControl + LWin + Right
 LAlt & w::
    Send #^{Right}
 Return
 
-; VLC Back
+; LAlt + q instead of LControl + LWin + Left
 LAlt & q::
    Send #^{Left}
 Return
