@@ -14,6 +14,16 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ::ty::Ty
 ::ci::Ci
 
+; Move between desktops using simpler shortcut
+; RAlt + , instead
+LAlt & w::
+   Send #^{Right}
+Return
+
+; VLC Back
+LAlt & q::
+   Send #^{Left}
+Return
 
 ; NumpadDot to Dot
 NumpadDot::.
@@ -51,28 +61,12 @@ RAlt & m::
    ControlSend,, {Space}, %VLC%             ;zadziałaj znakiem spacji laptop
 Return
 
-; VLC Next
-RAlt & .::
-   SetTitleMatchMode, 2
-   IfWinExist VLC media player
-      WinGetTitle, VLC
-   ControlSend,, {o}, %VLC%             ;zadziałaj znakiem 'o' laptop
-Return
-
-; VLC Back
-RAlt & ,::
-   SetTitleMatchMode, 2
-   IfWinExist VLC media player
-      WinGetTitle, VLC
-   ControlSend,, {p}, %VLC%             ;zadziałaj znakiem 'p' laptop
-Return
-
 ; run Cmder
 RAlt & j::
   Run, D:\Programy\cmder\Cmder.exe
 Return
 
-; zarządzanie głośnością
+; volume management
 LAlt & WheelUp::
   Send {Volume_Up}
 Return
@@ -81,17 +75,17 @@ LAlt & WheelDown::
   Send {Volume_Down}
 Return
 
-; Uruchamia kalkulator
-LControl & NumpadEnter::
-   Run, calc
+; mouse butons 4 to win
+XButton1::
+  Send {LWin}
 Return
 
-; Uruchamia główny katalog
-NumpadHome::
-   Run, Explorer E:\
+; mouse button 5 to win + tab
+XButton2::
+  Send #{Tab}
 Return
 
-; Poruszanie myszką
+; mouse movement using numeric keys
 NumpadDown::MouseMove,   0,  15, 1, R  Return
 NumpadLeft::MouseMove, -15,   0, 1, R  Return
 NumpadRight::MouseMove, 15,   0, 1, R  Return
@@ -101,10 +95,4 @@ NumpadClear::
 Return
 NumpadPgup::
    MouseClick, Right
-Return
-
-; test działąnia w programie
-#IfWinActive ahk_class Notepad
-   #space::
-      MsgBox, You pressed Win+Spacebar in Notepad.
 Return
