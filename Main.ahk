@@ -63,7 +63,7 @@ Return
 
 ; run Cmder
 RAlt & j::
-  Run, D:\Programy\cmder\Cmder.exe
+  Run, wt new-tab -p "Ubuntu-20.04" `; split-pane -p "Command Prompt" -V
 Return
 
 ; volume management
@@ -76,14 +76,14 @@ LAlt & WheelDown::
 Return
 
 ; mouse butons 4 to win
-XButton1::
-  Send {LWin}
-Return
+; XButton1::
+;   Send {LWin}
+; Return
 
 ; mouse button 5 to win + tab
-XButton2::
-  Send #{Tab}
-Return
+; XButton2::
+;   Send #{Tab}
+; Return
 
 ; mouse movement using numeric keys
 NumpadDown::MouseMove,   0,  15, 1, R  Return
