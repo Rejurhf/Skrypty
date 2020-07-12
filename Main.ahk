@@ -85,6 +85,13 @@ Return
 ;   Send #{Tab}
 ; Return
 
+; Remap qwertz left \ button
+SC056::LShift
+
+CapsLock::
+  Send {Escape}
+Return
+
 ; mouse movement using numeric keys
 NumpadDown::MouseMove,   0,  15, 1, R  Return
 NumpadLeft::MouseMove, -15,   0, 1, R  Return
