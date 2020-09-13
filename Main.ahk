@@ -15,7 +15,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 ::ci::Ci
 
 ; Move between desktops using simpler shortcut
-; LAlt + w instead of LControl + LWin + Right terst
+; LAlt + w instead of LControl + LWin + Right
 LAlt & w::
    Send #^{Right}
 Return
