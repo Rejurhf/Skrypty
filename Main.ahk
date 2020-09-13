@@ -29,36 +29,33 @@ Return
 NumpadDot::.
   Return
 
-; VLC Play/Pouse
-Media_Play_Pause::
-   SetTitleMatchMode, 2
-   IfWinExist VLC media player
-      WinGetTitle, VLC
-   ControlSend,, {Space}, %VLC%             ;zadziałaj znakiem spacji klawiatura
-Return
+; ; VLC Play/Pouse
+; Media_Play_Pause::
+;    SetTitleMatchMode, 2
+;    IfWinExist VLC media player
+;       WinGetTitle, VLC
+;    ControlSend,, {Space}, %VLC%             ;zadziałaj znakiem spacji klawiatura
+; Return
 
-; VLC Next song
-Media_Next::
-  SetTitleMatchMode, 2
-  IfWinExist VLC media player
-    WinGetTitle, VLC
-  ControlSend,, {n}, %VLC%             ;zadziałaj znakiem spacji klawiatura
-Return
+; ; VLC Next song
+; Media_Next::
+;   SetTitleMatchMode, 2
+;   IfWinExist VLC media player
+;     WinGetTitle, VLC
+;   ControlSend,, {n}, %VLC%             ;zadziałaj znakiem spacji klawiatura
+; Return
 
-; VLC Previous song
-Media_Prev::
-  SetTitleMatchMode, 2
-  IfWinExist VLC media player
-    WinGetTitle, VLC
-  ControlSend,, {p}, %VLC%             ;zadziałaj znakiem spacji klawiatura
-Return
+; ; VLC Previous song
+; Media_Prev::
+;   SetTitleMatchMode, 2
+;   IfWinExist VLC media player
+;     WinGetTitle, VLC
+;   ControlSend,, {p}, %VLC%             ;zadziałaj znakiem spacji klawiatura
+; Return
 
-; VLC Play/Pouse
+; Media Play/Pouse
 RAlt & m::
-   SetTitleMatchMode, 2
-   IfWinExist VLC media player
-      WinGetTitle, VLC
-   ControlSend,, {Space}, %VLC%             ;zadziałaj znakiem spacji laptop
+  Send {Media_Play_Pause}      ;zadziałaj znakiem spacji laptop
 Return
 
 ; run Cmder
