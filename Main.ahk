@@ -9,8 +9,10 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 #InstallKeybdHook
 
 ; skróty pisowni
-:*:mz@::mziomek108@gmail.com
+:*:mg@::mziomek108@gmail.com
 :*:re@::rejurhf108@gmail.com
+:*:mo@::mziomek@outlook.com
+:*:ma@::mziomek@andea.com
 ::ty::Ty
 ::ci::Ci
 
@@ -28,30 +30,6 @@ Return
 ; NumpadDot to Dot
 NumpadDot::.
   Return
-
-; ; VLC Play/Pouse
-; Media_Play_Pause::
-;    SetTitleMatchMode, 2
-;    IfWinExist VLC media player
-;       WinGetTitle, VLC
-;    ControlSend,, {Space}, %VLC%             ;zadziałaj znakiem spacji klawiatura
-; Return
-
-; ; VLC Next song
-; Media_Next::
-;   SetTitleMatchMode, 2
-;   IfWinExist VLC media player
-;     WinGetTitle, VLC
-;   ControlSend,, {n}, %VLC%             ;zadziałaj znakiem spacji klawiatura
-; Return
-
-; ; VLC Previous song
-; Media_Prev::
-;   SetTitleMatchMode, 2
-;   IfWinExist VLC media player
-;     WinGetTitle, VLC
-;   ControlSend,, {p}, %VLC%             ;zadziałaj znakiem spacji klawiatura
-; Return
 
 ; Media Play/Pouse
 RAlt & m::
@@ -71,16 +49,6 @@ Return
 LAlt & WheelDown::
   Send {Volume_Down}
 Return
-
-; mouse butons 4 to win
-; XButton1::
-;   Send {LWin}
-; Return
-
-; mouse button 5 to win + tab
-; XButton2::
-;   Send #{Tab}
-; Return
 
 ; Remap qwertz left \ button
 SC056::LShift
