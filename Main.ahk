@@ -32,7 +32,7 @@ NumpadDot::.
   Return
 
 ; Media Play/Pouse
-RAlt & m::
+RAlt & k::
   Send {Media_Play_Pause}      ;zadziałaj znakiem spacji laptop
 Return
 
